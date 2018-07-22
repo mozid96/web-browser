@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7f7f5"
+    android:background="#fbfcfc"
     android:paddingTop="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
@@ -18,13 +18,15 @@
       android:layout_width="match_parent"
       android:layout_height="8dp" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+        android:orientation="horizontal"
         android:layout_height="wrap_content">
 
 
         <EditText
+            android:fontFamily="cursive"
             android:id="@+id/edit_text"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
@@ -32,12 +34,14 @@
             android:layout_toStartOf="@+id/button"
             android:inputType="text"
             android:text=""
-            android:textSize="30sp"
-            android:hint=" search website"
+            android:textSize="25sp"
+            android:hint=" search or enter address"
             android:layout_width="200dp"
+            android:layout_weight="6"
             android:layout_height="wrap_content" />
 
         <Button
+            android:fontFamily="cursive"
             android:id="@+id/button"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
@@ -45,10 +49,11 @@
             android:textSize="30sp"
             android:background="#e60b0b"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:text="Go"/>
-    </RelativeLayout>
+    </LinearLayout>
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
